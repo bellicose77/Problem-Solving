@@ -4,13 +4,19 @@ int main()
 {
     long long int n;
     cin>>n;
-    int sum=0;
-    for(int i=1;i<sqrt(n);i++)
+    long long int sum=0;
+    for(long long int i=1;i<=sqrt(n);i++)
     {
         if(n%i==0)
         {
-            cout<<i<<n;
-            sum+=i;
+            if(n/i==i)
+            {
+                sum+=i;
+            }
+            else
+            {
+                sum+=i+(n/i);
+            }
         }
     }
     cout<<sum<<endl;
