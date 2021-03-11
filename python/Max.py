@@ -1,11 +1,16 @@
-print("heloo")
+li=[]
+n=int(input())
+for i in range(0,n):
+    x=int(input().split())
+    li.append(x)
+li.sort()
+v=li.pop()
+print(v)
 
-x=[1,2]
-y=[3,4]
-z=x+y
-sum=0
-for i in z:
-    print(i)
-    sum+=i
-
-print(sum)
+'''other person's code
+Numbers = []
+A = input()
+Numbers = map(int,input().split())
+Big = max(Numbers)
+print(Big)
+'''
