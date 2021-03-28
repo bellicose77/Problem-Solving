@@ -25,6 +25,10 @@ int main()
           cout<<c<<endl;
     }
 
+    /* other person's code
+       cout<<(max(p,(2*x + y) -a)+max(p,(3*z + y)-b));
+       */
+
 
     return 0;
 }
