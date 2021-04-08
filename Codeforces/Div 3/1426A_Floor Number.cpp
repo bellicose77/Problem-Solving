@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int t;
+    int t,v;
     cin>>t;
     int n,x;
     while(t--)
@@ -14,15 +14,18 @@ int main()
         }
         else
         {
-            for(int i=2;i<n;i++)
+            int minu=n-2;
+            if(minu%x!=0)
             {
-                int f=i*x;
-                if(n<=f)
-                {
-                    cout<<i<<endl;
-                    break;
-                }
+                v=minu/x+1;
+
             }
+            else
+            {
+                 v=minu/x;
+            }
+            cout<<v+1<<endl;
+
         }
     }
     return 0;
