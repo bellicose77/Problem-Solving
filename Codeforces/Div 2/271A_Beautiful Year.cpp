@@ -1,81 +1,78 @@
+#include<bits/stdc++.h>
+using namespace std;
 /*
-#include<bits/stdc++.h>
-using namespace std;
-int distinct_year(int n)
-{
-    int x;
-    vector<int>v;
-    while(n!=0)
-    {
-        x=n%10;
-        v.push_back(x);
-        n/=10;
-    }
-    int flag=0;
-    for(int i=0;i<v.size()-1;i++)
-    {
-        if(v[i]==v[i+1])
-        {
-           flag=1;
-           break;
-        }
-    }
-    if(flag==0)
-    {
-        int c=v[0]*1+v[1]*10+v[2]*100+v[3]*1000;
-        return c;
-    }
-    else if(flag==1)
-    {
-        v.clear();
-        return n;
-    }
-}
-int main()
-{
-    int n;
-    cin>>n;
-    for(int i=n+1;i<=9000;i++)
-    {
-        int x=distinct_year(i);
-        if(x!=0)
-        {
-            cout<<x<<endl;
+ another person's code
+   cin >>y;
+    while(1){
+        y++;
+        int a=y/1000;
+        int b=(y/100)%10;
+        int c=(y/10)%10;
+        int d=y%10;
+        if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d)
             break;
-        }
     }
+    cout <<y;
     return 0;
-}
-*/
 
+    another one
+    set<int>s;
 
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    int n;
-    cin>>n;
-    for(int i=n+1;i<=9000;i++)
-    {
-        string s;
-        stringstream ss;
-        ss<<i;
-        ss>>s;
-        int flag=0;
-        for(int j=0;j<s.size()-1;j++)
+        int j=i, a=0;
+        while(j>0)
         {
-            if(s[j]==s[j+1])
-            {
-                flag=1;
-                break;
-            }
+            int r = j%10; s.insert(r); j=j/10;
+            a++;
         }
-        if(flag==0)
+        if(s.size()==a)
         {
-            cout<<s<<endl;
+            cout<<i<<endl;
             break;
         }
+
+    */
+int main()
+{
+    int n,t,x,h,v,te,one;
+    cin>>n;
+    n+=1;
+    while(1)
+    {
+
+        vector<int>d;
+         t=n/1000;
+         x=n%1000;
+         h=x/100;
+         v=x%100;
+         te=v/10;
+         one=v%10;
+         d.push_back(t);
+         d.push_back(h);
+         d.push_back(te);
+         d.push_back(one);
+         sort(d.begin(),d.end());
+         int flag=0;
+         for(int i=0;i<d.size()-1;i++)
+         {
+             if(d[i]==d[i+1])
+             {
+                 flag=1;
+                 break;
+             }
+         }
+         if(flag==0)
+         {
+             cout<<n<<endl;
+             break;
+         }
+         else
+         {
+             n++;
+         }
+
     }
+
+
     return 0;
 }
 
