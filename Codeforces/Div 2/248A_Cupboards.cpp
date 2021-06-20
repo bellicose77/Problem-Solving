@@ -1,5 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
+/* other codes
+    if(l_close <= l_open && r_close < r_open)
+        cout << l_close + r_close;
+    else if(l_open < l_close && r_open <= r_close)
+        cout << l_open + r_open;
+    else if(l_close <= l_open && r_open < r_close)
+        cout << l_close + r_open;
+    else if(l_open < l_close && r_close <= r_open)
+        cout << l_open + r_close;
+        */
 int cupboard(int t)
 {
     int l,r;
