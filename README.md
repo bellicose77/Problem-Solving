@@ -1,2 +1,4 @@
 # Problem-Solving
- Problem Solving cpp code different Online judge
+Competitive Programming.
+Here is solutino code of problems of different Online Judge.
+I used most Cpp and pyhton for solving these problem.
