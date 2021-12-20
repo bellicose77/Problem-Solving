@@ -1,3 +1,4 @@
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void final_array(vector<int>r,vector<int>b,int big)
@@ -20,7 +21,7 @@ void final_array(vector<int>r,vector<int>b,int big)
         cout<<mixed[i]<<" ";
     }
     cout<<endl;
-    */
+
     vector<int>result;
     result.push_back(0);
     result.push_back(mixed[0]);
@@ -36,7 +37,7 @@ void final_array(vector<int>r,vector<int>b,int big)
     {
         cout<<result[i]<<" ";
     }
-    */
+
     cout<<*max_element(result.begin(),result.end())<<endl;
 }
 int main()
@@ -64,3 +65,48 @@ int main()
     }
     return 0;
 }
+*/
+#include<bits/stdc++.h>
+using namespace std;
+void prefix_sum(vector<int>r,vector<int>b){
+   //int su = r[0];
+   int su=0;
+   int max_su=0;
+   for(int i = 0;i<r.size();i++){
+    su = su+r[i];
+    //r[i]=su;
+    max_su=max(max_su,su);
+   }
+   //int max_r = *max_element(r.begin(),r.end());
+   //cout<<max_r<<endl;
+   int s =0;
+   int max_s=0;
+   for(int i=0;i<b.size();i++){
+    s+=b[i];
+    max_s=max(max_s,s);
+   }
+   //int max_b = *max_element(b.begin(),b.end());
+   int result = max_s+max_su;
+  cout<<result<<endl;
+}
+int main(){
+    int t,n,m,x,z;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        vector<int>r;
+        while(n--){
+            cin>>x;
+            r.push_back(x);
+        }
+        cin>>m;
+        vector<int>b;
+        while(m--){
+            cin>>z;
+            b.push_back(z);
+        }
+        prefix_sum(r,b);
+    }
+    return 0;
+}
+
