@@ -17,7 +17,7 @@ int main()
             }
         }
         //cout<<flag<<endl;
-        if(k==0 || k==1){
+        if(k==0){
             cout<<1<<endl;
         }
         else if(flag==0 )
