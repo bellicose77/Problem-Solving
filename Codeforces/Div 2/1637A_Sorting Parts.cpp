@@ -2,40 +2,40 @@
 using namespace std;
 void sorting_paths(int n)
 {
+
     int b=n;
     vector<long long int>v;
+    vector<long long int>v1;
     long long int x;
-    while(n--)
-    {
+    while(n--){
         cin>>x;
         v.push_back(x);
     }
-    long long int c=1;
-    for(long long int i=0;i<v.size()-1;i++){
-        if(v[0]==v[i+1]){
-            c++;
-        }
+    for(int i=0;i<v.size();i++){
+        v1.push_back(v[i]);
     }
+    sort(v1.begin(),v1.end());
+    int ma = *max_element(v.begin(),v.end());
+    int mi = *min_element(v.begin(),v.end());
     int flag=0;
-    for(long long int i=0;i<v.size()-1;i++){
-        if(v[0]>=v[i+1]){
-            flag=0;
-        }
-        else{
-            flag=1;
-            break;
-        }
+    for(int i=0;i<v1.size()-1;i+=2){
+            if(v1[i]-v[i+1]==0){
+                flag=1;
+                break;
+            }
+
     }
-    //cout<<c<<endl;
-    if(c==b){
+    if(mi==v[0] && flag==0){
         cout<<"NO"<<endl;
     }
-    else if(flag==0){
-        cout<<"YES"<<endl;
+    else if(ma==v[b-1] && flag==0){
+        cout<<"NO"<<endl;
     }
     else{
-        cout<<"NO"<<endl;
+        cout<<"YES"<<endl;
     }
+
+
 }
 int main()
 {
