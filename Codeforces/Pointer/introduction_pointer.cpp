@@ -14,6 +14,7 @@ int main(){
       double q,temp;
       temp=123.23;
       p=&temp;
-      cout<<*p<<endl;
+      q=*p;
+      cout<<q<<endl;
 return 0;
 }
