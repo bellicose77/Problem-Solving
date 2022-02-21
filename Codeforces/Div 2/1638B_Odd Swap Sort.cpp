@@ -53,41 +53,31 @@ void swap_pair(int n)
 {
     int x;
     vector<int>v;
-    while(n--){
+    vector<int>v1;
+    vector<int>even;
+    vector<int>odd;
+    while(n--)
+    {
         cin>>x;
-        v.push_back(x);
-    }
-    vector<int>ev;
-    vector<int>od;
-
-    for(int i=0;i<v.size();i++){
-        if(v[i]%2==0){
-            ev.push_back(v[i]);
+        if(x%2==0){
+            v.push_back(x);
+            even.push_back(x);
         }
         else{
-            od.push_back(v[i]);
+            v1.push_back(x);
+            odd.push_back(x);
         }
     }
-    int flag=0;
-    for(int i=0;i<ev.size();i++){
-        if(ev[i]>v[i+1]){
-            flag=1;
-            break;
-        }
-    }
-    int f=0;
-    for(int i=0;i<od.size();i++){
-        if(od[i]>od[i+1]){
-            f=1;
-            break;
-        }
-    }
-    if(flag== 0 && f==0){
-        cout<<"YES"<<endl;
-    }
-    else{
-        cout<<"NO"<<endl;
-    }
+   sort(v.begin(),v.end());
+   sort(v1.begin(),v1.end());
+   if(v==even && v1==odd){
+    cout<<"YES"<<endl;
+   }
+   else{
+    cout<<"NO"<<endl;
+   }
+
+
 
 }
 int main()
