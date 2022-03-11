@@ -9,12 +9,16 @@ void digit(int n)
     else
     {
         int x = n/2;
-        int mid = x-1;
-        int y = n-(mid*2);
-        cout<<mid<<" "<<y<<endl;
+        int mid = n%2;
+        int diff = x-mid;
+        if(diff>1){
+            mid+=diff;
+        }
+        cout<<x<<" after add"<<mid<<endl;
+        cout<<x<<" "<<mid<<endl;
         //vector<int>v;
-        int fina=mid+y;
-        if(mid>y){
+        int fina=mid+x;
+        if(x>mid){
             for(int i=0;i<fina;i++){
                 if(i%2==0){
                     cout<<2;
