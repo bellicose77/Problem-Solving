@@ -1,7 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+void digit(int n){
+    if(n<=2){
+        cout<<n<<endl;
+    }
+    else{
+            int i=1;
+        while(n!=0){
+            n-=i;
+            v.push_back(i);
+            i++;
 
+        }
+    }
+}
+int main()
 
-return 0;
+{
+    int t,n;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        digit(n);
+    }
+
+    return 0;
 }
