@@ -6,7 +6,7 @@ int coprime(int n)
         return 0;
     }
     else{
-        return 2;
+        return n/2;
     }
 }
 int main()
