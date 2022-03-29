@@ -5,6 +5,9 @@ int coprime(int n)
     if(n%2==1){
         return 0;
     }
+    else{
+        return 2;
+    }
 }
 int main()
 {
