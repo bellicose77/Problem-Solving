@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void fun(const int *p)
+void fun( int *p)
 {
     *p=1;
     cout<<*p<<endl;
@@ -14,8 +14,9 @@ cout<<*(prt++)<<endl;
 cout<<*(++prt)<<endl;
 cout<<*prt<<endl;
 */
-const int i=10;
-cout<<&i<<endl;
+int i=10;
+//cout<<&i<<endl;
 fun(&i);
+cout<<i<<endl;
 return 0;
 }
