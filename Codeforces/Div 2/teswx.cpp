@@ -4,7 +4,7 @@ void fun( int *p)
 {
     *p=1;
     cout<<*p<<endl;
-    cout<<"Something
+    cout<<"Something happend here"<<endl;
 }
 int main(){
 /*
