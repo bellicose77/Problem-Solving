@@ -3,6 +3,8 @@ using namespace std;
 int solve(int n)
 {
     int x,y;
+    int sx=0,sy=0;
+    int ex=0,ey=0;
     while(n--){
         cin>>x>>y;
     }
