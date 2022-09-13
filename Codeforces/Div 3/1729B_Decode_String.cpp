@@ -6,17 +6,17 @@ void decode(string s,int n){
     string x;
     for(int i=0;i<n;i++){
 
-        if(s[i]=='0' && s[i+1]=='0'){
-
-            cout<<s[i-1] <<" -> "<< s[i] <<endl;
-            i++;
-            }
-        else if(s[i]=='0' && s[i+1]!='0'){
-                cout<<s[i-2] <<" -> "<< s[i-1] <<endl;
-                }
-        else{
-            cout<<s[i]<<" ";
+      if(s[i]!=0){
+        if(s[i+2]=='0'){
+            cout<<s[i]<<" "<<s[i+1];
+            i+=2;
         }
+         else{
+        cout<<s[i];
+      }
+
+      }
+
     }
     cout<<endl;
 }
